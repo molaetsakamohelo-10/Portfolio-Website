@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kamohelo Warren Molaetsa - System developer/Web Developer & UI/UX designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS file linked here -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="site-header">
+    <a class="logo" href="#top">Kamohelo Warren Molaetsa</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">Dark</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero-kicker">Johannesburg, South Africa</p>
+      <h1>I build <span id="typed" aria-live="polite">websites</span><span class="cursor" aria-hidden="true"></span><br>people can actually use.</h1>
+      <p class="hero-sub">I am currently studying System Development at GCC as a second year student and I aspire to be a Web developer and designer that can turn rough ideas into fast, accessible products.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Hire me</a>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="web" aria-pressed="false">Web apps</button>
+          <button class="filter" data-filter="design" aria-pressed="false">Design</button>
+          <button class="filter" data-filter="mobile" aria-pressed="false">Mobile</button>
+        </div>
+      </div>
+
+      <div class="grid" id="project-grid">
+        <article class="card" data-category="web">
+          <div class="thumb t7"></div>
+          <h3><a href="websites/church/index.html">St Eliah John Apolstolic Church</a></h3>
+          <p>Calm, welcoming site with service times, groups and visiting details.</p>
+          <p class="tags">HTML : CSS : JavaScript</p>
+        </article>
+        <article class="card" data-category="design">
+          <div class="thumb t2"></div>
+          <h3>Mbali Bakery brand</h3>
+          <p>Identity, packaging and a one-page shop for a family bakery.</p>
+          <p class="tags">Branding · Figma</p>
+        </article>
+        <article class="card" data-category="web">
+          <div class="thumb t8"></div>
+          <h3><a href="websites/clothes/index.html">5TAR</a></h3>
+          <p>Minimal online clothing shop front in natural, muted tones. Made by Soweto, For Soweto.</p>
+          <p class="tags">HTML : CSS : JavaScript</p>
+        </article>
+        <article class="card" data-category="design">
+          <div class="thumb t5"></div>
+          <h3>Harvest Festival site</h3>
+          <p>Event site and ticket flow designed for slow mobile connections.</p>
+          <p class="tags">UX · Accessibility</p>
+        </article>
+        <article class="card" data-category="mobile">
+          <div class="thumb t6"></div>
+          <h3>Pocket Budget</h3>
+          <p>Simple budgeting app that works without an account.</p>
+          <p class="tags">Flutter · SQLite</p>
+        </article>
+      </div>
+      <p id="empty-msg" class="empty" hidden>No projects in this category yet.</p>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>I was never sure about what I wanted to do after school but I always knew I had love for Tech especially after obtaining a certificate for Digital Literacy. Today I study System Dev and I aim to design and build websites that load quickly, read clearly and work on any phone with my skills.</p>
+        <p>I care most about the boring parts: sensible structure, honest copy, and pages that still work when the network doesn't.</p>
+        <ul class="skills" aria-label="Skills">
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript</li>
+          <li>Accessibility</li>
+          <li>UI design</li>
+          <li>Performance</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Let's work together</h2>
+      <p class="contact-sub">Tell me about your project. I reply within 3 working days.</p>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <p class="error" data-for="name"></p>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <p class="error" data-for="email"></p>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <p class="error" data-for="message"></p>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="form-status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kamohelo Molaetsa</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <!-- JavaScript file linked here -->
+  <script src="script.js"></script>
+</body>
+</html>
